@@ -2,7 +2,8 @@ package com.ricardohui.springbootjwt;
 //https://www.javainuse.com/spring/boot-jwt
 
 
-import ch.qos.logback.core.subst.Token;
+import java.util.Objects;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -10,9 +11,17 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+import com.ricardohui.springbootjwt.JwtUserDetailsService;
 
 
+import com.ricardohui.springbootjwt.JwtTokenUtil;
+import com.ricardohui.springbootjwt.JwtRequest;
+import com.ricardohui.springbootjwt.JwtResponse;
 
 @RestController
 @CrossOrigin
