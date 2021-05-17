@@ -1,5 +1,5 @@
 
-# 
+Reference to https://www.javainuse.com/spring/boot-jwt
 
 To authenticate
 create a POST reuqest to  `localhost:8080/authenticate` with this body
